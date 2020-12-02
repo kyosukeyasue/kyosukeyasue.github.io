@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kyosuke portfolio</title>
+  <meta name="description" content="きょうすけのポートフォリオです。">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-logo-menu">
+
+      <nav class="sp-only">
+        <div class="gnav-toggle">
+          <input id="gnav-input" type="checkbox" class="gnav-hidden">
+          <label id="gnav-open" for="gnav-input"><span></span></label>
+          <label class="gnav-unshown" id="gnav-close" for="gnav-input"></label>
+          <div id="gnav-content">
+            <ul class="gnav-menu">
+              <li class="gnav-item">
+                <a href="#mv">TOP</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#profile">PROFILE</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#skill">SKILL</a>
+              </li>
+              <li class="gnav-item">
+                <a href="#works">WORKS</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+      <nav class="pc-only">
+        <ul class="gnav-menu">
+          <li class="gnav-item">
+            <a href="#mv">TOP</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#profile">PROFILE</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#skill">SKILL</a>
+          </li>
+          <li class="gnav-item">
+            <a href="#works">WORKS</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="mv">
+      <h1 class="mv-title">Kyosuke Yasue's<br class="sp-only">  portfolio</h1>
+    </section>
+
+    <section id="profile">
+      <div class="inner">
+        <h2>PROFILE</h2>
+        <div class="row">
+          <img id="profile-img" class="col-lg-6 mr-lg-5" src="img/profile-img.jpg" alt="きょうすけの画像です。">
+          <div class="col-lg-6 text-center">
+            <div class="text-lg-left">
+              <div>名前: きょうすけ</div>
+              <div>出身: 岐阜県</div>
+            </div>
+            <div class="text-lg-left">
+              現在、油圧シリンダメーカーで働いています。<br>
+              2019年夏頃、プログラミングを知り、人生初のpcを購入。<br>
+              独学で学習していたが、2020年の6月よりオンラインスクール受講。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skill">
+      <div class="inner">
+        <h2>SKILL</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="offset-lg-3 col-lg-3 text-lg-left"><i class="fas fa-caret-right"></i>言語:</div>
+            <div class="col-lg-6 text-lg-left">HTML,CSS,JavaScript,<br class="sp-only">PHP,SQL,Python</div>
+          </div>  
+          <div class="row">
+            <div class="offset-lg-3 col-lg-3 text-lg-left"><i class="fas fa-caret-right"></i>フレームワーク,ライブラリ:</div>
+            <div class="col-lg-6 text-lg-left">Bootstrap,jQuery,Vue.js</div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-3 text-lg-left"><i class="fas fa-caret-right"></i>ツール:</div>
+            <div class="col-lg-6 text-lg-left">Firebase</div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-3 text-lg-left"><i class="fas fa-caret-right"></i>開発環境:</div>
+            <div class="col-lg-6 text-lg-left">Cloud9,Visual Studio Code</div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-3 text-lg-left"><i class="fas fa-caret-right"></i>OS:</div>
+            <div class="col-lg-6 text-lg-left">MacOS,Linux</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="container inner">
+        <h2>WORKS</h2>
+        <div class="row text-center">
+          <div class="col-lg-4"> 
+            <figure class="figure">
+              <img src="img/minosato.png" class="figure-img img-fluid rounded border border-dark .img-fluid portfolio-item" alt="LP(飲食店)">
+              <figcaption class="figure-caption">
+                <p>架空の飲食店のLPです。<br>
+                  html/css/javascript/bootstrap
+                  <a href="minosato/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm">MORE</a></p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4">
+            <figure class="figure">
+              <img src="img/resipi-today.png" class="figure-img img-fluid rounded border border-dark .img-fluid portfolio-item" alt="今日の献立を決めてくれるサイトです。">
+              <figcaption class="figure-caption">
+                <p>今日の献立をランダムで決めてくれるサイトです。<br>
+                    html/css/Vue.js/楽天API
+                    <a href="resipi/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm">MORE</a></p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4">
+            <figure class="figure">
+              <img src="img/todo.png" class="figure-img img-fluid rounded border border-dark .img-fluid portfolio-item" alt="家の掃除を管理できるサイトです。">
+              <figcaption class="figure-caption">
+                <p>家の掃除を管理できるサイトです。<br>
+                    html/css/Vue.js/Firebase 
+                    <a href="sweeping_navi/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm">MORE</a></p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer class="foot-area">
+    <div class="inner">
+      <small class="foot-area_copy">Copyright &copy; kyosukeYasue's portfolio</small>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+</body>
+</html>

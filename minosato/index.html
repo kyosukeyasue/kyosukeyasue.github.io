@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <title>minonosato</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container text-center">
+        <div class="navbar-brand accordion-title">
+          <a class="logo" href="#">MINOSATO<span><i class="fas fa-utensils"></i></span></a>
+          <button v-on:click="accordionTop()" type="button" class="btn btn-light"><i class="toggle-icon-top fas fa-angle-double-down"></i></button>
+        </div>
+        <nav class="nav main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#info">Information</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="parallax bg-1" id="parallax-01" title="shotarrow sakamotoによるPixabayからの画像 ">
+    </div>
+    <div id="wrap">
+      <div id="news">
+        <h1 class="text-center section"><a class="border-bot">News</a></h1>
+        <carousel :per-page="1"
+        :per-page-custom=[[768,2],[1024,3]]
+        :autoplay="true"
+        :speed="1000"
+        :loop="true">
+          <slide><span class="label">
+            <div class="card shadow" style="width:15rem;">
+              <img class="card-img-top" src="images/img8.jpeg" width="250px" height="200px" alt="美濃の郷の画像1">
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">2020.8.10</h6>
+                <p class="card-text">夏の新メニューはじめました。</p>
+                <a href="#" class="card-link">more</a>
+              </div>
+            </div>
+          </span></slide>
+          <slide><span class="label">
+            <div class="card shadow" style="width:15rem;">
+              <img class="card-img-top" src="images/img9.jpeg" width="250px" height="200px" alt="美濃の郷の画像2">
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">2020.8.11</h6>
+                <p class="card-text">9月より営業時間の変更となります。</p>
+                <a href="#" class="card-link">more</a>
+              </div>
+            </div>
+          </span></slide>
+          <slide><span class="label">
+            <div class="card shadow" style="width:15rem;">
+              <img class="card-img-top" src="images/img10.jpg" width="250px" height="200px" alt="美濃の郷の画像3">
+              <div class="card-body">
+                <h6 class="card-subtitle text-muted">2020.8.1２</h6>
+                <p class="card-text">お客様の声をご紹介</p>
+                <a href="#" class="card-link">more</a>
+              </div>
+            </div>
+          </span></slide>
+        </carousel>
+      </div>
+      <div id="menu">
+        <h1 class="text-center section"><a class="border-bot">Menu</a></h1>
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-md-4 menu-icon">
+              <img src="images/img5.png" alt="" class="rounded img-fluid shadow">
+              <div class="row">
+                <p class="offset-2 col-8">季節限定</p>
+              </div>
+              <div class="row">
+                <button type="button" class="btn btn-outline-info btn-lg btn-block offset-4 col-4"><i class="fas fa-bars"></i></button>
+              </div>
+            </div>
+            <div class="col-md-4 menu-icon">
+              <img src="images/img6.png" alt="" class="rounded img-fluid shadow">
+              <div class="row">
+                <p class="offset-2 col-8">定番メニュー</p>
+              </div>
+              <div class="row">
+                <button type="button" class="btn btn-outline-warning btn-lg btn-block offset-4 col-4"><i class="fas fa-bars"></i></button>
+              </div>
+            </div>
+            <div class="col-md-4 menu-icon">
+              <img src="images/img7.png" alt="" class="rounded img-fluid shadow">
+              <div class="row">
+                <p class="offset-2 col-8">テイクアウト</p>
+              </div>
+              <div class="row">
+                <button type="button" class="btn btn-outline-success btn-lg btn-block offset-4 col-4"><i class="fas fa-bars"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="info">
+        <h1 class="text-center section"><a class="border-bot">Information</a></h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="text-center">
+                ● 〒xxx-xxxx<br>
+                岐阜県xxxx市〇〇町xx-xx<br>
+                ● 営業時間 : 11:00-22:00<br>
+                ● 定休日 : 水曜日
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p class="text-center">
+                ● アクセス<br>
+                JR美濃加茂線 美濃加茂駅から徒歩5分
+              </p>
+            </div>
+          </div>
+          <div class="map">
+            <iframe class="col" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13002.38441171877!2d137.01579049999998!3d35.4400341!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d5f82b97b89f683!2z576O5r-D5Yqg6IyC5biC5b255omA!5e0!3m2!1sja!2sjp!4v1597019070736!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <h1 class="text-center section"><a class="border-bot">Contact</a></h1>
+        <div class="container">
+          <div class="row">
+            <p class="col-md text-center">
+            宴会やマイクロバスでの送迎も承っております。<br>
+            詳しくは下記の電話かメールでお気軽に<br>
+            お問い合わせください。
+            </p>
+          </div>
+          <div class="row text-center">
+            <div class="col-md contact-ph"><i class="far fa-envelope"></i><span>xxxx-xx-xxxx</span></div>
+            <div class="col-md contact-ph"><i class="fas fa-mobile-alt"></i><span>example@mino.jp</span></div>
+          </div>
+          </div> 
+      </div>
+    </div>
+    <div class="parallax bg-2" id="parallax-02" title="takedahrsによるPixabayからの画像 ">
+        
+    </div>
+    <footer>
+      <div class="container text-center">
+        <nav class="nav footer-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#info">Information</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="navbar-brand accordion-title">
+          <button v-on:click="accordionFoot()" type="button" class="btn btn-light"><i class="toggle-icon-foot fas fa-angle-double-up"></i></button>
+          <a class="logo" href="#">MINOSATO<span><i class="fas fa-utensils"></i></span></a>
+        </div>
+        <small>&copy; 2020 MINOSATO</small>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

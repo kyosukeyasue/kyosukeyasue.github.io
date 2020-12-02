@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #fff;
+}
+
+h1,h2,h3 {
+  margin-top: 0;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover,a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+/*レイアウト関連*/
+.inner {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .inner {
+    max-width: 1200px;
+  }
+}
+
+.sp-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .sp-only {
+    display: none;
+  }
+
+  .pc-only {
+    display: block;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 200;
+}
+
+.header-logo-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.gnav-toggle {
+  position: relative;
+  margin-top: 12px;
+}
+
+.gnav-hidden {
+  display: none;
+}
+
+#gnav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+#gnav-open span,
+#gnav-open span::before,
+#gnav-open span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  cursor: pointer;
+}
+
+#gnav-open span::before {
+  bottom: -8px;
+}
+
+#gnav-open span::after {
+  bottom: -16px;
+}
+
+#gnav-close {
+  display: none;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+#gnav-input:checked ~ #gnav-close {
+  display: block;
+  opacity: 0.5;
+}
+
+#gnav-input:checked ~ #gnav-content {
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+#gnav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease-in-out;
+  transform: translateX(-105%);
+}
+
+.gnav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+}
+
+
+.gnav-item {
+  border-bottom: 2px solid #eee;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+
+.gnav-item a {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+.gnav-item a::first-line {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width:768px) {
+  .gnav-menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 15px;
+    margin: 0;
+  }
+
+  .gnav-item {
+    border-bottom: none;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .gnav-item a {
+    color: #333;
+    width: 120px;
+  }
+
+  .gnav-item a:hover {
+    color: #85a7cc;
+  }
+
+
+}
+
+#mv {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/main.jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.mv-title {
+  color: #fff;
+  text-shadow: 0px 0px 3px #333;
+  margin-top: 70px;
+}
+
+@media screen and (min-width:768px) {
+  .mv-area {
+    width: 100%;
+    height: 600px;
+  }
+
+  .mv-title {
+    margin-top: 90px;
+  }
+}
+
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 300px;
+  height: 500px;
+  margin: auto auto 1rem;
+}
+
+#profile-img {
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 30%; 
+  overflow: hidden; 
+  margin: 10px auto 30px;
+}
+
+.foot-area {
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+  background-color: #333;
+}
+
+.foot-area_copy {
+  color: #ccc;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+
